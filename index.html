@@ -611,30 +611,6 @@
     <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
     <script src="js/app.js"></script>
-    <script>
-        $(window).scroll(function() {
-            $(".text").each(function() {
-                var imagePos = $(this).offset().top;
-
-                var topOfWindow = $(window).scrollTop();
-                if (imagePos < topOfWindow + 600) {
-                    $(this).addClass("animated fadeInLeft");
-                }
-            });
-            $(".accordian").each(function() {
-                var imagePos = $(this).offset().top;
-
-                var topOfWindow = $(window).scrollTop();
-                if (imagePos < topOfWindow + 600) {
-                    $(this).addClass("animated fadeInRight");
-                }
-            });
-        });
-    </script>
-
-
-
-
 
 
 </body>
