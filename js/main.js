@@ -6,8 +6,10 @@ let botones = document.getElementsByClassName('btn-header');
 let cerrado = true;
 
 
-
-
+window.addEventListener('scroll', function() {
+    console.log(window.pageYOffset);
+    menus();
+});
 
 
 abrir.addEventListener('click', function() {
@@ -38,6 +40,23 @@ window.addEventListener('click', function(e) {
 });
 
 
+function menus() {
+    let desplazamiento_actual = window.pageYOffset;
+
+    if (desplazamiento_actual <= 100) {
+        nav.classList.remove('nav2');
+        nav.className = ('nav1');
+        nav.style.transition = '1s';
+        menu.style.top = '80px';
+
+    } else {
+        nav.classList.remove('nav1');
+        nav.className = ('nav2')
+        nav.style.transition = '1s';
+        menu.style.top = '84px';
+        abrir.style.color = '#fff';
+    }
+}
 
 
 
@@ -55,6 +74,7 @@ function apertura() {
 
 
 }
+
 
 $(window).scroll(function() {
     $(".text").each(function() {

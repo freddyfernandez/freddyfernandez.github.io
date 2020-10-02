@@ -5,7 +5,7 @@
     --color1: rgb(219, 144, .5);
     --color2: #185c0714;
     --color3: rgb(0, 161, 113);
-    --fondo: #f2f2f2;
+    --fondo: #082f3a;
     --titulo: 33px;
     --subtitulos: 20px;
     --espacios: 10px;
@@ -33,7 +33,7 @@ body {
 header {
     width: 100%;
     height: 100vh;
-    background: linear-gradient( 135deg, rgba(0, 64, 77, 0.9) 0%, rgba(0, 0, 0, 0.8) 100%), url(../images/landing-page.png) center no-repeat;
+    background: linear-gradient( 135deg, rgba(0, 64, 77, 0.9) 0%, rgba(0, 0, 0, 0.8) 100%), url(../images/mvc.gif) center no-repeat;
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
@@ -272,7 +272,8 @@ nav {
 .nav2 {
     background: var(--fondo);
     height: 88px;
-    color: #000;
+    z-index: 100;
+    color: #fff;
 }
 
 .contenedor-nav {
@@ -284,7 +285,8 @@ nav {
     max-width: 1450px;
     height: inherit;
     overflow: hidden;
-    background-color: #082f3a;
+    background-color: transparent;
+    /*#082f3a;*/
 }
 
 #enlaces {
@@ -504,7 +506,7 @@ html {
 
 .carta-info {
     text-align: center;
-    background: linear-gradient(45deg, black, transparent);
+    background: linear-gradient(5deg, black, transparent);
     margin: 0px 4px;
     border-radius: 0rem 0rem 0.8rem 0.8rem;
     margin-top: -2px;
@@ -527,28 +529,36 @@ html {
 .carta-info button {
     width: 10rem;
     height: 2.5rem;
-    background-color: #c29525;
+    background-color: #243a5e;
     border: none;
     font-family: "Baloo Da 2", serif;
     font-size: 1.5rem;
     line-height: 1.5rem;
-    color: #eee;
     border-radius: 0.3rem;
     box-shadow: 0 0.1rem 0.8rem rgba(0, 0, 0, 0.4);
     margin: 4px 4px;
 }
 
+.carta-info button:hover {
+    width: 10.2rem;
+    height: 2.6rem;
+    color: #050801;
+    box-shadow: 0 0 5px var(--color4), 0 0 15px var(--color4), 0 0 40px var(--color4), 0 0 100px var(--color4);
+}
+
 .carta-info a {
-    color: #000;
+    color: #eee;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 
 /* --- --- CAROUSEL ---background-color:#B6004B; --- */
 
 .carrousel {
-    padding: 30px 0px;
+    padding: 38px 0px;
     /*background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);*/
-    background: linear-gradient( 135deg, rgba(0, 64, 77, 0.9) 0%, rgba(0, 0, 0, 0.8) 100%), url(../images/landing-page.png) center no-repeat;
+    background: linear-gradient( 135deg, rgba(0, 64, 77, 0.9) 0%, rgba(0, 0, 0, 0.8) 100%), url(../images/fondo.jpg) center no-repeat;
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
@@ -862,7 +872,7 @@ li.scrum:after {
 
 .service {
     background-color: rgb(17, 95, 154);
-    padding: 30px 0px;
+    padding: 38px 0px;
 }
 
 .service .go-down {
@@ -1116,7 +1126,7 @@ li.scrum:after {
 
 .start-today {
     background-color: #222222;
-    padding: 30px 15px;
+    padding: 38px 15px;
 }
 
 .start-today .go-down {
