@@ -17,7 +17,7 @@ var seccion6 = document.getElementsByClassName("schedule");
 var seccion7 = document.getElementsByClassName("price-package");
 
 //interaccion Botones Redes Sociales
-var red = ["https://www.facebook.com/Fr3d10", "https://www.linkedin.com/in/freddy-fernandez-fc", "https://wa.me/51957490024"];
+var red = ["https://github.com/freddyfernandez", "https://www.linkedin.com/in/freddy-fernandez-fc", "https://wa.me/51957490024"];
 
 
 window.addEventListener('load', function() {
