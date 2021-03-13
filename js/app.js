@@ -1,3 +1,25 @@
+let nav = document.getElementById('nav');
+let menu = document.getElementById('enlaces');
+
+let abrir = document.getElementById('open');
+let botones = document.getElementsByClassName('btn-header');
+let cerrado = true;
+
+
+//muestreo de seccciones
+var carrousel = document.getElementsByClassName("carrousel");
+var seccion1 = document.getElementsByClassName("about");
+var seccion2 = document.getElementsByClassName("schedule");
+var seccion3 = document.getElementsByClassName("classes");
+//var seccion4 = document.getElementsByClassName("schedule");
+var seccion5 = document.getElementsByClassName("gallery");
+var seccion6 = document.getElementsByClassName("schedule");
+var seccion7 = document.getElementsByClassName("price-package");
+
+//interaccion Botones Redes Sociales
+var red = ["https://www.facebook.com/Fr3d10", "https://www.linkedin.com/in/freddy-fernandez-fc", "https://wa.me/51957490024"];
+
+
 window.addEventListener('load', function() {
     new Glider(document.querySelector('.carousel__lista'), {
         slidesToShow: 1,
@@ -25,8 +47,6 @@ window.addEventListener('load', function() {
         }]
     });
 });
-
-
 
 
 /*Menu lateral*/
@@ -68,23 +88,45 @@ $(document).ready(function() {
     })
 })
 
-//interaccion Botones Redes Sociales
-var red = ["https://www.facebook.com/Fr3d10", "https://www.linkedin.com/in/freddy-fernandez-fc", "https://wa.me/51957490024"];
+
+$(window).scroll(function() {
+    menus();
+    $(".text").each(function() {
+        var imagePos = $(this).offset().top;
+
+        var topOfWindow = $(window).scrollTop();
+        if (imagePos < topOfWindow + 600) {
+            $(this).addClass("animated fadeInLeft");
+        }
+    });
+    $(".accordian").each(function() {
+        var imagePos = $(this).offset().top;
+
+        var topOfWindow = $(window).scrollTop();
+        if (imagePos < topOfWindow + 600) {
+            $(this).addClass("animated fadeInRight");
+        }
+    });
+});
+
+window.addEventListener('click', function(e) {
+
+    if (cerrado == false) {
+        let span = document.querySelector('span');
+        if (e.target !== span && e.target !== abrir) {
+            menu.style.width = '0%';
+            menu.style.overflow = 'hidden';
+            cerrado = true;
+        }
+    }
+
+});
+
+
 
 function redsocial(x) {
     window.open(red[x]);
 }
-
-
-//muestreo de seccciones
-var carrousel = document.getElementsByClassName("carrousel");
-var seccion1 = document.getElementsByClassName("about");
-var seccion2 = document.getElementsByClassName("schedule");
-var seccion3 = document.getElementsByClassName("classes");
-//var seccion4 = document.getElementsByClassName("schedule");
-var seccion5 = document.getElementsByClassName("gallery");
-var seccion6 = document.getElementsByClassName("schedule");
-var seccion7 = document.getElementsByClassName("price-package");
 
 function mostrar(x) {
 
@@ -164,3 +206,49 @@ function mostrar(x) {
 
 
 }
+
+function menus() {
+    let desplazamiento_actual = window.pageYOffset;
+
+    if (desplazamiento_actual <= 100) {
+        nav.classList.remove('nav2');
+        nav.className = ('nav1');
+        nav.style.transition = '1s';
+        menu.style.top = '80px';
+
+    } else {
+        nav.classList.remove('nav1');
+        nav.className = ('nav2')
+        nav.style.transition = '1s';
+        menu.style.top = '84px';
+        abrir.style.color = '#fff';
+    }
+}
+
+
+abrir.addEventListener('click', function() {
+    apertura();
+});
+
+function apertura() {
+    if (cerrado) {
+        menu.style.width = '70vw';
+        menu.style.display = 'block';
+        cerrado = false;
+    } else {
+        menu.style.width = '0%';
+        menu.style.overflow = 'hidden';
+        cerrado = true;
+    }
+
+
+}
+window.addEventListener('resize', function() {
+
+    if (screen.width >= 700) {
+        cerrado = true;
+        menu.style.removeProperty('overflow');
+        menu.style.removeProperty('width');
+
+    }
+});
