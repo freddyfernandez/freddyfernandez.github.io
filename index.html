@@ -605,35 +605,46 @@
             </div>
         </div>
 
-        <!-- Load Facebook SDK for JavaScript -->
-        <div id="fb-root ">
 
-        </div>
-        <script>
-            window.fbAsyncInit = function() {
-                FB.init({
-                    xfbml: true,
-                    version: 'v10.0'
-                });
-            };
 
-            (function(d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0];
-                if (d.getElementById(id)) return;
-                js = d.createElement(s);
-                js.id = id;
-                js.src = 'https://connect.facebook.net/es_ES/sdk/xfbml.customerchat.js';
-                fjs.parentNode.insertBefore(js, fjs);
-            }(document, 'script', 'facebook-jssdk'));
-        </script>
 
-        <!-- Your Chat Plugin code -->
-        <div class="fb-customerchat " attribution="setup_tool " page_id="101114894993855 " logged_in_greeting="Hola! como puedo ayudarte? " logged_out_greeting="Hola! como puedo ayudarte? ">
-        </div>
     </section>
     <!-- End Contact -->
+    <!--CHATS-->
+    <section>
 
+        <!--Load whatssap-->
+        <a id="app-whatsapp" target="_blanck" href="https://api.whatsapp.com/send?phone=51957490024&amp;text=Hola&amp;Freddy,&amp;buenos dias">
+            <i class="fab fa.whatsapp"></i>
+        </a>
 
+        <!-- Load Facebook SDK for JavaScript -->
+        <a id="app-messenger" target="_blanck" href="m.me/msysperu">
+            <i class="fab  fa-facebook-messenger"></i>
+        </a>
+        <div id="fb-root "> </div>
+        <!-- Your Chat Plugin code -->
+        <div class="fb-customerchat " attribution="setup_tool " page_id="101114894993855 " logged_in_greeting="Hola! como puedo ayudarte? " logged_out_greeting="Hola! como puedo ayudarte? " greeting_dialog_display="fade"></div>
+        </div>
+
+    </section>
+    <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+                xfbml: true,
+                version: 'v10.0'
+            });
+        };
+
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = 'https://connect.facebook.net/es_ES/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js "></script>
     <script src="https://kit.fontawesome.com/2c36e9b7b1.js " crossorigin="anonymous "></script>
     <script src="js/main.js "></script>
