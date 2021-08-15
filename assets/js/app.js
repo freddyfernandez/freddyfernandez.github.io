@@ -5,16 +5,6 @@ function redsocial(x) {
     window.open(red[x]);
 }
 
-//muestreo de seccciones
-var carrousel = document.getElementsByClassName("carrousel");
-var seccion1 = document.getElementsByClassName("about");
-var seccion2 = document.getElementsByClassName("schedule");
-var seccion3 = document.getElementsByClassName("classes");
-//var seccion4 = document.getElementsByClassName("schedule");
-var seccion5 = document.getElementsByClassName("gallery");
-var seccion6 = document.getElementsByClassName("schedule");
-var seccion7 = document.getElementsByClassName("price-package");
-var seccion8 = document.getElementsByClassName("schedule");
 
 function ocultar() {
 
