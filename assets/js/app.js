@@ -112,4 +112,27 @@ function animationfadeIn() {
 
 $(window).scroll(function() {
     animationfadeIn();
+    menus();
+
 });
+
+function menus() {
+    let desplazamiento_actual = window.pageYOffset;
+    let menu = document.getElementsByClassName('nav')[0];
+
+    if (desplazamiento_actual < 100) {
+
+        menu.style.background = 'transparent';
+    } else {
+        menu.style.background = 'rgb(9 47 58)';
+
+        /*
+
+        --color4: rgb(3 51 88);
+    --color5: rgb(17, 95, 154);
+        $(".logo img").css('filter','none');
+        $(".header_home .ham-burger span").css('background-color', 'black');
+        $(".header_home .logo a").css('color', 'black');*/
+
+    }
+}
